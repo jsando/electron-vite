@@ -1,0 +1,4 @@
+{
+  "include": ["./**/*.ts", "./**/*.d.ts"],
+  "references": [{ "path": "../../tsconfig.json" }]
+}
