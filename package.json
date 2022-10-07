@@ -7,12 +7,13 @@
     "lint:main": "cd packages/main && eslint .",
     "lint:preload": "cd packages/preload && eslint .",
     "lint:renderer": "cd packages/renderer && eslint .",
-    "lint": "npm run lint:main && npm run lint:preload && npm run lint:renderer",
+    "lint": "run-s format-verify lint:main lint:preload lint:renderer",
     "format": "prettier --write  \"**/*.ts\"",
+    "format-verify": "prettier --check  \"**/*.ts\"",
     "build:main": "tsc -p packages/main --noEmit && vite build packages/main",
     "build:preload": "tsc -p packages/preload --noEmit && vite build packages/preload",
     "build:renderer": "tsc -p packages/renderer --noEmit && vite build packages/renderer",
-    "build": "npm run build:renderer && npm run build:preload && npm run build:main",
+    "build": "run-s build:renderer build:preload build:main",
     "start": "npm run build && electron dist/main/main.cjs",
     "dev:renderer": "vite packages/renderer"
   },
@@ -27,6 +28,7 @@
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
     "jasmine-core": "^4.4.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
