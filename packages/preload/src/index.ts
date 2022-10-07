@@ -6,4 +6,3 @@ contextBridge.exposeInMainWorld('api', {
     // Open an URL into the default web-browser.
     openUrl: (url: string) => shell.openExternal(url),
 });
-
