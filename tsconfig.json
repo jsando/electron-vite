@@ -21,6 +21,7 @@
   "include": [
     "packages/renderer/vite.config.ts",
     "packages/main/vite.config.ts",
-    "packages/preload/vite.config.ts"
+    "packages/preload/vite.config.ts",
+    "vitest.config.ts"
   ]
 }
