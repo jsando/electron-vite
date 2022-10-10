@@ -1,0 +1,11 @@
+node_modules
+coverage
+dist
+release
+tmp
+.git
+.svn
+.DS_Store
+.idea
+.cache
+junit.xml

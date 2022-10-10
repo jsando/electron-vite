@@ -13,6 +13,7 @@ coverage
 dist-ssr
 *.local
 junit.xml
+release
 
 # Editor directories and files
 .vscode/*

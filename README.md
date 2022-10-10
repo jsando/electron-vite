@@ -1,10 +1,10 @@
 # Template project for electron+vite+typescript
 
-Just sharing this to get input from others, don't expect it to work for you.
+Sharing this to get input from others, don't expect it to work for you.
 
 I'm trying to get a basic CI build setup that has the following:
 
-- Clean separation between the electron processes (main, preload, renderer)
+- Clean separation between the code for the different electron processes (main, preload, renderer)
 - Code coverage in junit.xml (for use in Jenkins)
 - Verify and reformat code with prettier
 - Linting with eslint
