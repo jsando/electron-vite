@@ -9,7 +9,7 @@ export default defineConfig({
     build: {
         // Add inline sourcemap
         sourcemap: 'inline',
-        outDir: '../../dist/preload',
+        outDir: '../../build/app/preload',
         emptyOutDir: true,
 
         // Build preload in "lib" mode of Vite.

@@ -10,7 +10,7 @@ export default defineConfig({
         sourcemap: true,
         emptyOutDir: true,
         // Build output inside `dist/renderer` at the project root.
-        outDir: '../../dist/renderer',
+        outDir: '../../build/app/renderer',
 
         rollupOptions: {
             input: join(__dirname, 'index.html'),

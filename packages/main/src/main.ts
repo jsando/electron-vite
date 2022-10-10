@@ -36,7 +36,7 @@ class ElectronMain {
             height: 768,
             webPreferences: {
                 webviewTag: false,
-                // Electron current directory will be at `dist/main`, we need to include
+                // Electron current directory will be at `build/app/main`, we need to include
                 // the preload script from this relative path: `../preload/index.cjs`.
                 preload: path.join(__dirname, '../preload/index.cjs'),
             },
@@ -50,9 +50,10 @@ class ElectronMain {
         });
 
         // Define the URL to use for the `BrowserWindow`, depending on the DEV env.
+        console.log(`${__dirname}`);
         const pageUrl = import.meta.env.DEV
             ? 'http://localhost:3000'
-            : new URL('../dist/renderer/index.html', `file://${__dirname}`).toString();
+            : new URL('../app/renderer/index.html', `file://${__dirname}`).toString();
 
         await browserWindow.loadURL(pageUrl);
 

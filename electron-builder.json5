@@ -4,9 +4,9 @@
 {
     appId: 'YourAppID',
     directories: {
-        output: 'release/${version}',
+        output: 'build/installer/${version}',
     },
-    files: ['dist'],
+    files: ['build/app'],
     linux: {
         target: [
             {

@@ -1,8 +1,5 @@
 build
-dist
-release
-coverage
-.DS_Store
 node_modules
+.DS_Store
 .env
 .env.*

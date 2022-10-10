@@ -1,11 +1,7 @@
 node_modules
-coverage
-dist
-release
-tmp
+build
 .git
 .svn
 .DS_Store
 .idea
 .cache
-junit.xml
