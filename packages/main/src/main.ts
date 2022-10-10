@@ -50,11 +50,11 @@ class ElectronMain {
         });
 
         // Define the URL to use for the `BrowserWindow`, depending on the DEV env.
-        console.log(`${__dirname}`);
+        console.log(`cwd: ${__dirname}`);
         const pageUrl = import.meta.env.DEV
-            ? 'http://localhost:3000'
+            ? 'http://localhost:5173'
             : new URL('../app/renderer/index.html', `file://${__dirname}`).toString();
-
+        console.log(`pageUrl: ${pageUrl}`);
         await browserWindow.loadURL(pageUrl);
 
         return browserWindow;
