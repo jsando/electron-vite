@@ -33,7 +33,7 @@ class ElectronMain {
         const browserWindow = new BrowserWindow({
             show: false,
             width: 1200,
-            height: 768,
+            height: 768,            
             webPreferences: {
                 webviewTag: false,
                 // Electron current directory will be at `build/app/main`, we need to include
@@ -41,6 +41,7 @@ class ElectronMain {
                 preload: path.join(__dirname, '../preload/index.cjs'),
             },
         });
+        //browserWindow.webContents.openDevTools();
 
         // If you install `show: true` then it can cause issues when trying to close the window.
         // Use `show: false` and listener events `ready-to-show` to fix these issues.
